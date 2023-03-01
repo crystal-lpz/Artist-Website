@@ -38,44 +38,18 @@
       height: 100vh;
     }
     section.outNow {
-      background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/967/original/overlay.png?1677275243);
+      background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/342/original/clean-black-plaster.jpg?1677532525);
       background-color: whitesmoke;
-      color: black;
-      padding: 30px 0;
+      color: white;
+
+      padding: 90px 0;
     }
     .logo {
       padding: 270px 0;
       opacity: 0.8;
       max-width: 1290px;
     }
-    h1 {
-      font-family: "Archivo Black", sans-serif;
-      text-align: center;
-      margin: 0;
-      padding: 270px 0;
-      color: white;
-      font-size: 200px;
-      text-transform: uppercase;
-      animation: glowing 1200ms infinite;
-    }
-    /* @keyframes glowing {
-          0% {
-            opacity: 0.1;
-          }
-          50% {
-            opacity: 0.5;
-          }
 
-          100% {
-            opacity: 1;
-          }
-          50% {
-            opacity: 0.5;
-          }
-          0% {
-            opacity: 0.1;
-          }
-        } */
     h2 {
       font-size: 20px;
       opacity: 0.9;
@@ -148,7 +122,9 @@
     }
 
     .musicIcon {
+      filter: brightness(100%) contrast(0);
       max-width: 50px;
+      opacity: 1;
     }
     .musicIcon:hover {
       transition: all 00ms ease-out;
@@ -169,6 +145,9 @@
       grid-template-columns: 1fr 1fr;
       align-items: center;
       gap: 61px;
+    }
+    .grid-col-2-tour {
+      grid-template-columns: 1fr 1fr;
     }
     .grid-col-3 {
       grid-template-columns: 1fr 1fr 1fr;
@@ -195,8 +174,8 @@
     .insta-photo img:hover {
       opacity: 0.4;
     }
-    .instagram-container h4 {
-      transform: rotate(-90deg);
+    .instagram-container {
+      margin: 90px 0;
     }
 
     .responsive-img {
@@ -265,6 +244,43 @@
       background-color: white;
       border-radius: 10px;
     }
+    .tourDate {
+      visibility: hidden;
+    }
+    .tourDates h2 {
+      font-size: 28px;
+      margin: 0;
+      padding: 0 auto;
+    }
+    .btn {
+      display: inline-block;
+      padding: 8px 24px;
+      border-radius: 36px;
+      margin: 30px 0;
+    }
+    .btn-Main {
+      background-color: white;
+      color: black;
+      border: 3px solid white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .btn-Main:hover {
+      background-color: black;
+      color: white;
+      font-weight: bold;
+    }
+    table {
+      margin-bottom: 30px;
+    }
+    .subHeader {
+      text-align: left;
+    }
+    th,
+    td {
+      font-size: 20px;
+      text-transform: uppercase;
+    }
 
     @media (max-width: 900px) {
       .container {
@@ -290,6 +306,15 @@
         font-size: 43px;
         text-align: center;
         opacity: 1;
+      }
+
+      th.subHeader {
+        color: red;
+        text-decoration: underline;
+      }
+      th,
+      td {
+        font-size: 10px;
       }
       section {
         padding: 30px 20px;
@@ -347,9 +372,21 @@
       .musicIcon {
         max-width: 30px;
       }
-
+      .insta-photo {
+        width: 150px;
+        height: 150px;
+        background-color: #dedbd7;
+      }
       .grid-col-2 {
         grid-template-columns: 1fr;
+      }
+      .grid-col-2-tour {
+        grid-template-columns: 1fr;
+      }
+      .grid-col-3 {
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        gap: 10px;
       }
       .grid-col-4 {
         grid-template-columns: 1fr;
@@ -368,8 +405,8 @@
       <div class="navbar-links">
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#tour">Tour Dates</a></li>
         </ul>
       </div>
     </nav>
@@ -382,7 +419,7 @@
         />
       </div>
     </section>
-    <section>
+    <section id="about">
       <div class="container">
         <div class="grid grid-col-2">
           <div>
@@ -656,6 +693,202 @@
                 />
               </a>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="tour">
+      <div class="container tourDates">
+        <h4>UPCOMING TOUR DATES</h4>
+
+        <div class="grid grid-col-2-tour">
+          <div>
+            <h2>NORTH AMERICA</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col" class="tourDate">Month</th>
+                  <th scope="col" class="tourDate">day</th>
+                  <th scope="col" class="tourDate">Location</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="subHeader">March</th>
+                </tr>
+
+                <tr>
+                  <th scope="row">MON</th>
+                  <td>06</td>
+                  <td>Austin, TX - EMO's</td>
+                </tr>
+                <tr>
+                  <th scope="row">TUE</th>
+                  <td>07</td>
+                  <td>Houston , TX - White Oak Music Hall</td>
+                </tr>
+                <tr>
+                  <th scope="row">WED</th>
+                  <td>08</td>
+                  <td>Dallas , TX - The Echo Lounge & Music Hall</td>
+                </tr>
+                <tr>
+                  <th scope="row">FRI</th>
+                  <td>10</td>
+                  <td>Nashville , TN - Brooklyn Bowl</td>
+                </tr>
+                <tr>
+                  <th scope="row">SAT</th>
+                  <td>11</td>
+                  <td>Atlanta , GA - Buckhead Theatre</td>
+                </tr>
+                <tr>
+                  <th scope="row">MON</th>
+                  <td>13</td>
+                  <td>Washington , DC - 9:30 Club</td>
+                </tr>
+                <tr>
+                  <th scope="row">THU</th>
+                  <td>16</td>
+                  <td>Philadelphia , PA - TLA</td>
+                </tr>
+                <tr>
+                  <th scope="row">FRI</th>
+                  <td>17</td>
+                  <td>New York , NY - Hammerstein Ballroom</td>
+                </tr>
+                <tr>
+                  <th scope="row">SAT</th>
+                  <td>18</td>
+                  <td>Boston , MA - House of Blues</td>
+                </tr>
+                <tr>
+                  <th scope="row">MON</th>
+                  <td>20</td>
+                  <td>Montreal , QC - Corona Theatre</td>
+                </tr>
+                <tr>
+                  <th scope="row">TUE</th>
+                  <td>21</td>
+                  <td>Toronto , ON - Danforth Music Hall</td>
+                </tr>
+                <tr>
+                  <th scope="row">THU</th>
+                  <td>23</td>
+                  <td>Detroit , MI - St. Andrews Halls</td>
+                </tr>
+                <tr>
+                  <th scope="row">FRI</th>
+                  <td>24</td>
+                  <td>Chicago , IL - Riviera Theatre</td>
+                </tr>
+                <tr>
+                  <th scope="row">SAT</th>
+                  <td>25</td>
+                  <td>Minneapolis, MN - First Avenue</td>
+                </tr>
+                <tr>
+                  <th scope="row">MON</th>
+                  <td>27</td>
+                  <td>Denver, CO - Summit</td>
+                </tr>
+                <tr>
+                  <th scope="row">TUE</th>
+                  <td>28</td>
+                  <td>Salt Lake City, UT - The Grand @ the Complex</td>
+                </tr>
+                <tr>
+                  <th scope="row">THU</th>
+                  <td>30</td>
+                  <td>Seattle, WA - The Showbox</td>
+                </tr>
+                <tr>
+                  <th scope="row">FRI</th>
+                  <td>31</td>
+                  <td>Vancouver, BC - Commodore Ballroom</td>
+                </tr>
+                <tr>
+                  <th class="subHeader">April</th>
+                </tr>
+
+                <tr>
+                  <th scope="row">Sat</th>
+                  <td>01</td>
+                  <td>Portland, OR - Wonder Ballroom</td>
+                </tr>
+                <tr>
+                  <th scope="row">Mon</th>
+                  <td>03</td>
+                  <td>San Francisco , Ca - The Regency Ballroom</td>
+                </tr>
+                <tr>
+                  <th scope="row">WED</th>
+                  <td>05</td>
+                  <td>Los Angeles , CA - The Wiltern</td>
+                </tr>
+              </tbody>
+            </table>
+            <h2>Europe</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col" class="tourDate">Month</th>
+                  <th scope="col" class="tourDate">day</th>
+                  <th scope="col" class="tourDate">Location</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="subHeader">April</th>
+                </tr>
+
+                <tr>
+                  <th scope="row">Sat</th>
+                  <td>22</td>
+                  <td>Brussels (BEL) - Ancienne Belgique</td>
+                </tr>
+                <tr>
+                  <th class="subHeader">May</th>
+                </tr>
+
+                <tr>
+                  <th scope="row">FRI</th>
+                  <td>12</td>
+                  <td>Winterthur (CH) - Salzhaus</td>
+                </tr>
+                <tr>
+                  <th scope="row">SAT</th>
+                  <td>13</td>
+                  <td>Bologna(ITA) - Estragon</td>
+                </tr>
+                <tr>
+                  <th scope="row">SUN</th>
+                  <td>14</td>
+                  <td>Rome(ITA) - Orion</td>
+                </tr>
+                <tr>
+                  <th scope="row">TUE</th>
+                  <td>16</td>
+                  <td>Milan (ITA) - Alcatraz</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <a
+              href="https://www.inhaler.band/tour/"
+              class="btn btn-Main"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Buy Tickets</a
+            >
+          </div>
+
+          <div>
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/589/original/IJ6MezkVJ7hPHcC6.jpg?1677706549"
+              class="responsive-img"
+              alt=""
+            />
           </div>
         </div>
       </div>
