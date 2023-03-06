@@ -21,10 +21,11 @@
       background-color: black;
     }
     .container {
-      padding: 0 300px;
+      padding: 100px 300px;
     }
     section {
       color: white;
+      padding: 30px 0 50px 0;
     }
     section.header {
       background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/852/original/ab-80f19cbdaba77b8a37297fffda3371b684bcf03d.jpg?1677182949);
@@ -34,18 +35,14 @@
       background-size: cover;
       padding-top: 20px;
       padding-bottom: 0px;
-      margin-bottom: 100px;
       height: 100vh;
     }
     section.outNow {
       background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/342/original/clean-black-plaster.jpg?1677532525);
-      background-color: whitesmoke;
       color: white;
-
-      padding: 90px 0;
     }
     .logo {
-      padding: 270px 0;
+      padding: 194px 0;
       opacity: 0.8;
       max-width: 1290px;
     }
@@ -61,9 +58,11 @@
     }
     h4 {
       font-family: "Archivo Black", sans-serif;
-      margin-top: 90px;
+      text-transform: uppercase;
       text-align: center;
       font-size: 60px;
+      margin-top: 30px;
+      margin-bottom: 110px;
     }
     p {
       font-size: 17px;
@@ -71,6 +70,12 @@
       opacity: 0.8;
       line-break: loose;
     }
+    a.Source {
+      text-decoration: none;
+      color: white;
+      opacity: 0.3;
+    }
+
     .bioContent {
       padding-bottom: 90px;
     }
@@ -95,6 +100,9 @@
       opacity: 0.2;
       text-decoration: none;
       font-style: italic;
+    }
+    .content {
+      padding-bottom: 100px;
     }
     .album h2 {
       text-transform: uppercase;
@@ -130,6 +138,7 @@
       transition: all 00ms ease-out;
       opacity: 0.5;
     }
+
     .gray {
       filter: grayscale(100%);
       max-width: 300px;
@@ -138,6 +147,29 @@
     .gray:hover {
       filter: none;
     }
+    /* Merch Section */
+    .merch a {
+      text-decoration: none;
+    }
+    .merch h5 {
+      margin: 20px 0;
+      color: #d5d5d5;
+      text-align: center;
+      font-size: 20px;
+    }
+    .merch h5:hover {
+      color: red;
+    }
+    .merch h6 {
+      text-align: center;
+      font-size: 15px;
+    }
+    .merch img {
+      background-color: #d5d5d5;
+    }
+
+    /*  */
+    /* Grid */
     .grid {
       display: grid;
     }
@@ -151,15 +183,20 @@
     }
     .grid-col-3 {
       grid-template-columns: 1fr 1fr 1fr;
-      align-items: center;
       gap: 20px;
     }
+    .grid-footer {
+      grid-template-columns: 1fr 2fr;
+      gap: 20px;
+    }
+
     .grid-col-4 {
       grid-template-columns: 1fr 1fr 1fr 1fr;
       align-items: center;
       gap: 16px;
     }
 
+    /*  */
     .insta-photo {
       width: 420px;
       height: 420px;
@@ -174,13 +211,11 @@
     .insta-photo img:hover {
       opacity: 0.4;
     }
-    .instagram-container {
-      margin: 90px 0;
-    }
 
     .responsive-img {
       width: 100%;
     }
+    /* navbar */
     .navbar {
       display: flex;
       position: relative;
@@ -244,6 +279,8 @@
       background-color: white;
       border-radius: 10px;
     }
+    /*  */
+    /* Tour Section */
     .tourDate {
       visibility: hidden;
     }
@@ -252,6 +289,7 @@
       margin: 0;
       padding: 0 auto;
     }
+    /* Button */
     .btn {
       display: inline-block;
       padding: 8px 24px;
@@ -270,18 +308,67 @@
       color: white;
       font-weight: bold;
     }
+    .center {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      padding: 0 auto;
+    }
+    /*  */
+    /* table */
     table {
       margin-bottom: 30px;
     }
-    .subHeader {
-      text-align: left;
-    }
     th,
     td {
+      opacity: 0.8;
       font-size: 20px;
       text-transform: uppercase;
     }
-
+    .subHeader {
+      opacity: 1;
+      color: white;
+      text-align: left;
+    }
+    /*  */
+    /*  */ /*  */
+    /* Footer */
+    footer {
+      /* background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/911/original/ShopDesign-5932.jpg?1677879425);
+      background-position: center;
+      background-size: cover; */
+      padding: 40px 0;
+    }
+    footer h5 {
+      color: #eae9dd;
+      font-size: 15px;
+      margin: 0 0 10px 0;
+    }
+    footer p {
+      color: #eae9dd;
+      line-height: normal;
+      font-size: 15px;
+      line-break: anywhere;
+    }
+    footer ul {
+      margin: 0;
+      padding: 0;
+    }
+    footer li {
+      list-style: none;
+    }
+    footer a {
+      text-decoration: none;
+      color: white;
+      font-size: 15px;
+      text-transform: uppercase;
+      opacity: 0.7;
+    }
+    footer a:hover {
+      color: #eae9dd;
+      opacity: 1;
+    }
+    /*  */
     @media (max-width: 900px) {
       .container {
         padding: 0 50px;
@@ -299,6 +386,10 @@
         max-width: 258px;
         padding: 190px 0;
       }
+      .gray {
+        max-width: 100%;
+        max-height: 100%;
+      }
       h1 {
         display: block;
         margin: 20px 20px auto;
@@ -308,10 +399,6 @@
         opacity: 1;
       }
 
-      th.subHeader {
-        color: red;
-        text-decoration: underline;
-      }
       th,
       td {
         font-size: 10px;
@@ -362,6 +449,7 @@
         margin-top: 44px;
         font-size: 40px;
       }
+
       .album h3 {
         font-size: 33px;
         margin-bottom: 10px;
@@ -386,8 +474,10 @@
       .grid-col-3 {
         grid-template-columns: 1fr 1fr;
         justify-content: center;
+        justify-items: center;
         gap: 10px;
       }
+
       .grid-col-4 {
         grid-template-columns: 1fr;
         gap: 0;
@@ -406,6 +496,7 @@
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#about">About</a></li>
+          <li><a href="#merch">Merch</a></li>
           <li><a href="#tour">Tour Dates</a></li>
         </ul>
       </div>
@@ -414,48 +505,49 @@
       <div class="container">
         <img
           src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/972/original/inhaler-logo.gif?1677278205"
-          class="logo"
+          class="responsive-img logo"
           alt=""
         />
       </div>
     </section>
     <section id="about">
       <div class="container">
-        <div class="grid grid-col-2">
-          <div>
-            <img
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/849/original/ab6761610000e5ebd95d3fd8043567d6ee6c9b8e.jpeg?1677182577"
-              class="responsive-img"
-              alt=""
-            />
-          </div>
-          <div>
-            <h2>About Inhaler</h2>
-            <h3>Who is Inhaler?</h3>
-            <p>
-              Inhaler is an Irish rock band originating from Dublin. The band
-              consists of vocalist and guitarist Elijah Hewson, bassist Robert
-              Keating, guitarist Josh Jenkinson and drummer Ryan McMahon.
-              Hewson, Keating and McMahon formed Inhaler in 2012 at St Andrews
-              College, with Jenkinson joining in 2015.
-            </p>
-            <p>
-              In a very un-rock ‘n’ roll turn, the band’s name comes from
-              Hewson’s teenage asthma. “I had asthma for a while and people just
-              kind of started calling us the Inhalers,” the frontman told
-              Rolling Stone. “It was something that stuck. It felt right.
-              <a
-                href="https://americansongwriter.com/behind-the-band-name-inhaler/"
-                target="_blank"
-                >Read More</a
-              >
-            </p>
+        <div class="content">
+          <div class="grid grid-col-2">
+            <div>
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/849/original/ab6761610000e5ebd95d3fd8043567d6ee6c9b8e.jpeg?1677182577"
+                class="responsive-img"
+                alt=""
+              />
+            </div>
+            <div>
+              <h2>About Inhaler</h2>
+              <h3>Who is Inhaler?</h3>
+              <p>
+                Inhaler is an Irish rock band originating from Dublin. The band
+                consists of vocalist and guitarist Elijah Hewson, bassist Robert
+                Keating, guitarist Josh Jenkinson and drummer Ryan McMahon.
+                Hewson, Keating and McMahon formed Inhaler in 2012 at St Andrews
+                College, with Jenkinson joining in 2015.
+              </p>
+              <p>
+                In a very un-rock ‘n’ roll turn, the band’s name comes from
+                Hewson’s teenage asthma. “I had asthma for a while and people
+                just kind of started calling us the Inhalers,” the frontman told
+                Rolling Stone. “It was something that stuck. It felt right.
+
+                <a
+                  href="https://americansongwriter.com/behind-the-band-name-inhaler/"
+                  target="_blank"
+                  class="Source"
+                  >Source:American Song Writer</a
+                >
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section>
-      <div class="container">
+
         <h4>Meet The Band</h4>
         <div class="bioContent grid grid-col-4">
           <div class="bioContainer">
@@ -545,154 +637,190 @@
         </div>
       </div>
     </section>
+
     <section class="outNow">
       <div class="container">
-        <div class="grid grid-col-2">
-          <div class="album">
-            <h2>new album</h2>
-            <h3>Cuts & Bruises</h3>
-            <h4>OUT NOW</h4>
+        <div class="content">
+          <div class="grid grid-col-2">
+            <div class="album">
+              <h2>new album</h2>
+              <h3>Cuts & Bruises</h3>
+              <h4>OUT NOW</h4>
 
-            <ul>
-              <li>
-                <a
-                  href="https://open.spotify.com/album/2qZd7lp0lLRjeFe0O9Ou6S?autoplay=true"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/968/original/spotify.png?1677275740"
-                    class="musicIcon"
-                    alt=""
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://music.apple.com/us/album/cuts-bruises/1649643543"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/969/original/itunes.png?1677275755"
-                    class="musicIcon"
-                    alt=""
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://music.youtube.com/playlist?list=OLAK5uy_ka6hm4vAiqOjpl_aZnkaMis1ZS6bpjJXE"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/970/original/youtube.png?1677275767"
-                    class="musicIcon"
-                    alt=""
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.pandora.com/artist/inhaler/cuts-and-bruises/AL2Jbf4lc4jxvVk?corr=knowledge_panel&part=google"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/971/original/pandora.png?1677275862"
-                    class="musicIcon"
-                    alt=""
-                  />
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <img
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/870/original/mobile.jpg?1677192347"
-              class="responsive-img"
-              alt=""
-            />
+              <ul>
+                <li>
+                  <a
+                    href="https://open.spotify.com/album/2qZd7lp0lLRjeFe0O9Ou6S?autoplay=true"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/968/original/spotify.png?1677275740"
+                      class="musicIcon"
+                      alt=""
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://music.apple.com/us/album/cuts-bruises/1649643543"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/969/original/itunes.png?1677275755"
+                      class="musicIcon"
+                      alt=""
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://music.youtube.com/playlist?list=OLAK5uy_ka6hm4vAiqOjpl_aZnkaMis1ZS6bpjJXE"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/970/original/youtube.png?1677275767"
+                      class="musicIcon"
+                      alt=""
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.pandora.com/artist/inhaler/cuts-and-bruises/AL2Jbf4lc4jxvVk?corr=knowledge_panel&part=google"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/971/original/pandora.png?1677275862"
+                      class="musicIcon"
+                      alt=""
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/870/original/mobile.jpg?1677192347"
+                class="responsive-img"
+                alt=""
+              />
+            </div>
           </div>
         </div>
-        <div class="instagram-container">
-          <h4>INHALER Official Instagram</h4>
-          <div class="grid grid-col-3 insta">
-            <div class="insta-photo">
+
+        <div id="merch" class="Merch-container">
+          <h4>INHALER Merch</h4>
+          <div class="grid grid-col-3">
+            <div class="merch">
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/670/original/SharedImage-143216.png?1677788597"
+                class="responsive-img"
+                alt=""
+              />
+
               <a
-                href="https://www.instagram.com/p/Co2cgKCsEKq/?utm_source=ig_web_copy_link"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><img
-                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/977/original/332044099_590518295939845_4992109651132316065_n.jpg?1677280739"
-                  class="responsive-img"
-                  alt=""
-              /></a>
-            </div>
-            <div class="insta-photo">
-              <a
-                href="https://www.instagram.com/p/Cou22jYMWs2/?utm_source=ig_web_copy_link"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><img
-                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/979/original/331331232_1456235311574953_6624155168779360756_n.jpg?1677281023"
-                  class="responsive-img"
-                  alt=""
-              /></a>
-            </div>
-            <div class="insta-photo">
-              <a
-                href="https://www.instagram.com/p/CpATlfqsAFD/?utm_source=ig_web_copy_link"
+                href="https://shop.inhaler.band/*/Music/Cuts-Bruises-CD/7M341ZHL000"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/983/original/332540076_189803667004619_7688366392680740202_n.jpg?1677281171"
-                  class="responsive-img"
-                  alt=""
-                />
+                <h5>CUTS & BRUISES CD</h5>
               </a>
+
+              <h6>$7.99</h6>
             </div>
-            <div class="insta-photo">
+            <div class="merch">
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/671/original/SharedImage-143204.png?1677788609"
+                class="responsive-img"
+                alt=""
+              />
               <a
-                href="https://www.instagram.com/p/Co7rp92sLql/?utm_source=ig_web_copy_link"
+                href="https://shop.inhaler.band/*/Music/Cuts-Bruises-Cassette-1/7M351ZHL000"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/986/original/332140387_2077190555810986_3599125433953113023_n.jpg?1677282442"
-                  class="responsive-img"
-                  alt=""
-                />
+                <h5>CUTS & BRUISES CASSETTE #1</h5>
               </a>
+
+              <h6>$6.99</h6>
             </div>
-            <div class="insta-photo">
+
+            <div class="merch">
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/672/original/SharedImage-143223.png?1677788620"
+                class="responsive-img"
+                alt=""
+              />
               <a
-                href="https://www.instagram.com/p/CnsCrtYsMuX/?utm_source=ig_web_copy_link"
+                href="https://shop.inhaler.band/*/*/12-SIGNED-PRINT-STANDARD-LP-AND-DELUXE-D2C-LP-BUNDLE/7M3R0000000"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/990/original/326324798_692928232372514_8849683471958470847_n.jpg?1677282854"
-                  class="responsive-img"
-                  alt=""
-                />
+                <h5>12" SIGNED PRINT, STANDARD LP AND DELUXE D2C LP BUNDLE</h5>
               </a>
+
+              <h6>sold out</h6>
             </div>
-            <div class="insta-photo">
+            <div class="merch">
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/700/original/SharedImage-148480.png?1677790936"
+                class="responsive-img"
+                alt=""
+              />
               <a
-                href="https://www.instagram.com/p/Clt-iV8sVlc/?utm_source=ig_web_copy_link"
+                href="https://shop.inhaler.band/*/*/Alternative-Sleeve-LP-Slipmat-Cassette-Bundle/7QYZ0000000"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/993/original/318291431_854281319101436_6961547766240375146_n.jpg?1677283017"
-                  class="responsive-img"
-                  alt=""
-                />
+                <h5>ALTERNATIVE SLEEVE LP, SLIPMAT + CASSETTE BUNDLE</h5>
               </a>
+
+              <h6>$37.99</h6>
             </div>
+            <div class="merch">
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/711/original/SharedImage-145124.png?1677792770"
+                class="responsive-img"
+                alt=""
+              />
+              <a
+                href="https://shop.inhaler.band/*/*/Signed-Double-Sided-Poster-Eli-Josh-Cassette-Bundle/7NNR0000000"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h5>SIGNED DOUBLE SIDED POSTER + ELI & JOSH CASSETTE BUNDLE</h5>
+              </a>
+
+              <h6>$19.99</h6>
+            </div>
+            <div class="merch">
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/712/original/SharedImage-145123.png?1677793056"
+                class="responsive-img"
+                alt=""
+              />
+              <a
+                href="https://shop.inhaler.band/*/*/Signed-Double-Sided-Poster-Rob-Ryan-Cassette-Bundle/7NNT0000000"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h5>SIGNED DOUBLE SIDED POSTER + ROB & RYAN CASSETTE BUNDLE</h5>
+              </a>
+
+              <h6>$19.99</h6>
+            </div>
+          </div>
+          <div class="center">
+            <a
+              href="https://shop.inhaler.band/*/Music/"
+              target="_blank"
+              class="btn btn-Main"
+              >SEE MORE
+            </a>
           </div>
         </div>
       </div>
@@ -828,7 +956,7 @@
                 </tr>
               </tbody>
             </table>
-            <h2>Europe</h2>
+            <h2>EUROPE</h2>
             <table>
               <thead>
                 <tr>
@@ -893,6 +1021,177 @@
         </div>
       </div>
     </section>
+    <section class="outNow">
+      <div class="container">
+        <div class="instagram-container">
+          <h4>INHALER Official Instagram</h4>
+          <div class="grid grid-col-3 insta">
+            <div class="insta-photo">
+              <a
+                href="https://www.instagram.com/p/Co2cgKCsEKq/?utm_source=ig_web_copy_link"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/977/original/332044099_590518295939845_4992109651132316065_n.jpg?1677280739"
+                  class="responsive-img"
+                  alt=""
+              /></a>
+            </div>
+            <div class="insta-photo">
+              <a
+                href="https://www.instagram.com/p/Cou22jYMWs2/?utm_source=ig_web_copy_link"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/979/original/331331232_1456235311574953_6624155168779360756_n.jpg?1677281023"
+                  class="responsive-img"
+                  alt=""
+              /></a>
+            </div>
+            <div class="insta-photo">
+              <a
+                href="https://www.instagram.com/p/CpATlfqsAFD/?utm_source=ig_web_copy_link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/983/original/332540076_189803667004619_7688366392680740202_n.jpg?1677281171"
+                  class="responsive-img"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="insta-photo">
+              <a
+                href="https://www.instagram.com/p/Co7rp92sLql/?utm_source=ig_web_copy_link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/986/original/332140387_2077190555810986_3599125433953113023_n.jpg?1677282442"
+                  class="responsive-img"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="insta-photo">
+              <a
+                href="https://www.instagram.com/p/CnsCrtYsMuX/?utm_source=ig_web_copy_link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/990/original/326324798_692928232372514_8849683471958470847_n.jpg?1677282854"
+                  class="responsive-img"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="insta-photo">
+              <a
+                href="https://www.instagram.com/p/Clt-iV8sVlc/?utm_source=ig_web_copy_link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/068/993/original/318291431_854281319101436_6961547766240375146_n.jpg?1677283017"
+                  class="responsive-img"
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="grid grid-footer">
+          <div>
+            <h5>INHALER</h5>
+            <ul>
+              <li>
+                <a
+                  href="https://www.inhaler.band/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Website
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/inhalerdublin/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.tiktok.com/@inhaler_on_tik"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Tiktok
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://twitter.com/InhalerDublin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  twitter
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/channel/UC7j8qa0NY4CteN46q60Fojg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  youtube
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h5>About INHALER</h5>
+            <p>
+              Inhaler is an Irish rock band originating from Dublin. Formed in
+              2012, the band consists of vocalist and guitarist Elijah Hewson,
+              bassist Robert Keating, guitarist Josh Jenkinson and drummer Ryan
+              McMahon.
+            </p>
+            div>
+            <h5>About This Website</h5>
+            <p>
+              I created this page as part of a project for SheCodes Pop Star
+              Landing Page Challenge. This project was created by
+              <a
+                href="https://www.crystallpzcodes.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Crystal Lopez
+              </a>
+
+              and it's
+              <a
+                href="https://github.com/crystal-lpz/Artist-Website.git"
+                target="_blank"
+                rel="noopener noreferrer"
+                >opened sourced</a
+              >
+              .
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script>
       const toggleButton = document.getElementsByClassName("toggle-button")[0];
       const navbarLinks = document.getElementsByClassName("navbar-links")[0];
